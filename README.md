@@ -52,6 +52,9 @@ sed -i "s#security.debian.org#mirrors.aliyun.com/debian-security#g" /etc/apt/sou
 echo "deb https://mirrors.ustc.edu.cn/proxmox/debian/pve bullseye pve-no-subscription" >>  /etc/apt/sources.list
 ```
 
+```
+# systemctl  restart pvedaemon.service
+```
 
 #### 3.最后更新
 ```
