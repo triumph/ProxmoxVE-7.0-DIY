@@ -40,7 +40,9 @@ echo "deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-pacific bullseye main"
 
 ```
 sed -i.bak "s#http://download.proxmox.com/debian#https://mirrors.ustc.edu.cn/proxmox/debian#g" /usr/share/perl5/PVE/CLI/pveceph.pm
-sed -i 's|http://download.proxmox.com|https://mirrors.ustc.edu.cn/proxmox|g' /usr/share/perl5/PVE/APLInfo.pm
+sed -i 's#http://download.proxmox.com#https://mirrors.ustc.edu.cn/proxmox#g' /usr/share/perl5/PVE/APLInfo.pm
+sed -i "s#https://releases.turnkeylinux.org/pve#https://mirrors.ustc.edu.cn/proxmox/images#g"         /usr/share/perl5/PVE/APLInfo.pm
+sed -i "s#http://mirror.turnkeylinux.org/turnkeylinux/#https://mirrors.ustc.edu.cn/turnkeylinux/#g"   /var/lib/pve-manager/apl-info/releases.turnkeylinux.org 
 ```
 ```
 sed -i.bak "s#ftp.debian.org/debian#mirrors.aliyun.com/debian#g" /etc/apt/sources.list
